@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Lobster&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f7;
+  color: #333;
+}
+
+h1 {
+  font-family: "Lobster";
+}
+
+header {
+  background: #73ec8b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sticky {
+  background-color: #388e3c;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.spacer {
+  height: 600px;
+}
+
+#content {
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 610px;
+}
+
+.b1 {
+  background-color: #73ec8b;
+  border-color: #73ec8b;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.b1:hover {
+  color: #73ec8b;
+  background-color: white;
+  border-color: #73ec8b;
+}
+
+#bottom-left-bush {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#top-right-bush {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 14%;
+  height: 33%;
+  margin-right: 0 px;
+  margin-top: 60px;
+}
+
+h2 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 60px;
+  background: linear-gradient(to right, #73c726, #09877f);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Leckerli One";
+  display: block;
+  position: relative;
+  top: 200px;
+}
+
+#grass {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
