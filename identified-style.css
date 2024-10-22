@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&family=Lobster&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 0;
+}
+
+.navbar {
+    background: linear-gradient(to right, #73c726, #09877f);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    font-family: "Lobster";
+    font-size: 27px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 150px;
+}
+
+.title {
+    text-align: left;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "Leckerli One";
+    background: linear-gradient(to right, #73c726 10%, #09877f 40%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.image-section img {
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.info-section {
+    background-color: #e0f2e9;
+    padding: 20px;
+    width: 646px;
+    height: 500px;
+    border-radius: 15px;
+    opacity: 0px;
+
+}
+
+.info-section h2 {
+    color: #222;
+    font-size: 45px;
+    margin-bottom: 10px;
+    width: 602px;
+    height: 44px;
+}
+
+.info-section p {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.info-section p em {
+    font-size: 32px;
+    color: #444;
+    margin-left: 121px;
+}
+
+.description {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+}
+
+.care-info {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    margin-top: 10px;
+    gap: 5px; 
+}
+
+.watering, .sunlight, .pruning {
+    width: 1165px; 
+    height: 134px; 
+    margin: 20px auto; 
+    background-color: #CEE9E1; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 168px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.sunlight {
+    background-color: #E8E9CE;
+}
+
+.pruning {
+    background-color: #E9D8CE;
+}
+
+.watering-icon, .sunlight-icon, .pruning-icon {
+    position: absolute;
+    max-width: 155px;
+    height: 134px;
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+.watering-text, .sunlight-text, .pruning-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.watering h2, .sunlight h2, .pruning h2 {
+    font-size: 26px;
+    font-family: "Red Hat Text";
+    margin: 0;
+}
+
+.watering p, .sunlight p, .pruning p {
+    font-size: 24px;
+    font-family: "Red Hat Text";
+    margin-top: 5px;
+}
