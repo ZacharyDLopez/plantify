@@ -9,13 +9,14 @@
 }
 
 body {
-  height: 100%;
-  width: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f5f5f7;
   color: #333;
+  overflow: hidden;
 }
 
 h1 {
@@ -58,14 +59,22 @@ h2 {
   color: #333;
 }
 
-.buttons {
+.upload-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 610px;
 }
 
-.b1 {
+.button-1 {
   background-color: #73ec8b;
   border-color: #73ec8b;
   color: white;
@@ -78,7 +87,7 @@ h2 {
   transition: 0.3s;
 }
 
-.b1:hover {
+.button-1:hover {
   color: #73ec8b;
   background-color: white;
   border-color: #73ec8b;
@@ -97,7 +106,7 @@ h2 {
 }
 
 #top-right-bush {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
@@ -107,7 +116,7 @@ h2 {
   margin-top: 60px;
 }
 
-h2 {
+.title {
   margin: 0 auto;
   text-align: center;
   font-size: 60px;
@@ -116,8 +125,6 @@ h2 {
   -webkit-background-clip: text;
   font-family: "Leckerli One";
   display: block;
-  position: relative;
-  top: 200px;
 }
 
 #grass {
