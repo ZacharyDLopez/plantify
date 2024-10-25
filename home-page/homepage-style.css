@@ -85,20 +85,29 @@ h2 {
   font-size: 30px;
   border-radius: 10px;
   transition: 0.3s;
+
+  &:hover {
+    color: #73ec8b;
+    background-color: white;
+    border-color: #73ec8b;
+  }
 }
 
-.button-1:hover {
-  color: #73ec8b;
-  background-color: white;
-  border-color: #73ec8b;
+.bush{
+  position: fixed;
+  width: 18vw;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .bush {
+    width: 30vw !important;
+  }
 }
 
 #bottom-left-bush {
-  position: fixed;
   bottom: 0;
   left: 0;
-  width: 18vw;
-  height: auto;
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -106,13 +115,9 @@ h2 {
 }
 
 #top-right-bush {
-  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
-  width: 18vw;
-  height: auto;
-  margin-right: 0 px;
   margin-top: 60px;
 }
 
