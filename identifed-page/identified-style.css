@@ -2,10 +2,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-color: #73ec8b;
+    overflow-x: hidden;
 }
 
 body {
@@ -25,6 +29,7 @@ body {
     transition: background-color 0.3s ease;
     font-family: "Lobster";
     font-size: 27px;
+    max-width: 100vw;
 }
 
 .navbar ul {
@@ -46,12 +51,14 @@ body {
     text-decoration: underline;
 }
 
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    border-radius: 10px;
-    padding: 20px;
-    margin-left: 150px;
+.title-container{
+    display: flex;
+    justify-content: center;
+}
+
+.plant-container {
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -64,72 +71,63 @@ body {
     -webkit-background-clip: text;
 }
 
-.content {
+.content-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    max-height: 20rem;
+    #uploaded-image{
+        max-width: 100%;
+        aspect-ratio: auto;
+         border-radius: 8px;
+    }
 }
 
-.image-section img {
-    width: 500px;
-    height: 500px;
-    border-radius: 8px;
-    margin-right: 20px;
-}
-
-.info-section {
+.info-section{
     background-color: #e0f2e9;
     padding: 20px;
-    width: 646px;
-    height: 500px;
+    max-height: 100%;
     border-radius: 15px;
-    opacity: 0px;
 
-}
+    .description {
+        font-size: 30px;
+        margin: 25px 0;
+        margin-top: 25px;
+        font-size: 15px;
+        color: #555;
+    }
 
-.info-section h2 {
-    color: #222;
-    font-size: 45px;
-    margin-bottom: 10px;
-    width: 602px;
-    height: 44px;
-}
+    h2 {
+        color: #222;
+        font-size: 45px;
+        margin-bottom: 10px;
+        width: 602px;
+        height: 44px;
+        overflow: hidden;
+    }
 
-.info-section p {
-    font-size: 30px;
-    margin: 25px 0;
-}
-
-.info-section p em {
-    font-size: 32px;
-    color: #444;
-    margin-left: 121px;
-}
-
-.description {
-    margin-top: 25px;
-    font-size: 15px;
-    color: #555;
+    p em {
+        font-size: 32px;
+        color: #444;
+        margin-left: 121px;
+    }
 }
 
 .care-info {
     display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    margin-top: 10px;
-    gap: 5px; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin-top: 4.5rem
 }
 
 .watering, .sunlight, .pruning {
-    width: 1165px; 
-    height: 134px; 
+    width: 90%; 
     margin: 20px auto; 
     background-color: #CEE9E1; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-left: 168px; 
+    padding: 20px; 
     display: flex; 
     align-items: center; 
 }
