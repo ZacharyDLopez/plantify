@@ -175,3 +175,18 @@ body {
     font-family: "Red Hat Text";
     margin-top: 5px;
 }
+
+.back-button-container {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  #back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+  }
