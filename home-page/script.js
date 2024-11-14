@@ -41,7 +41,6 @@ document.getElementById('image-input').addEventListener('change', function() {
       .then(response => response.json())
       .then(data => {
         //let accessToken = data.access_token
-        console.log('SUCCESSFULL',data)
         document.getElementById('loading-screen').style.display = 'none';
 
         const suggestions = data.result.classification.suggestions;
@@ -54,13 +53,9 @@ document.getElementById('image-input').addEventListener('change', function() {
           localStorage.setItem('scientificName', plantInfo.name);
           localStorage.setItem('probability', plantInfo.probability);
           localStorage.setItem('description', plantInfo.plant_details ? plantInfo.plant_details.description : "No description available.");
-          localStorage.setItem('wateringInfo', plantInfo.watering || "No watering info available.");
-          localStorage.setItem('sunlightInfo', plantInfo.sunlight || "No sunlight info available.");
-          // localStorage.setItem('pruningInfo', plantInfo.pruning || "No pruning info available.");
-          //localStorage.setItem('plantAccessToken', data.access_token);
           localStorage.setItem('plantID', data.id);
-
           window.location.href = '/identifed-page/plant-identified.html';
+
         } else {
           alert('No plant identified. Please try again.');
         }
@@ -71,26 +66,4 @@ document.getElementById('image-input').addEventListener('change', function() {
         alert('Error identifying plant. Please try again.');
       });
     };
-
-    let detailsHeader = new Headers();
-    detailsHeader.append("Content-Type", "application/json");
-    detailsHeader.append("Api-Key", apiKey);
-
-    let detailRequestOptions = {
-      method : 'GET',
-      headers : detailsHeader,
-      redirect : 'follow'
-    };
-
-    // fetch("https://plant.id/api/v3/kb/plants/ADQuTDRVfU1caQRidkdcbFlsZVVBdV1lBDVnUGJRaFk-?details=common_names,url,description,taxonomy,rank,gbif_id,inaturalist_id,image,synonyms,edible_parts,watering,propagation_methods&language=en", detailRequestOptions)  
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     console.log(data)
-    //   })
-    //   .catch(err => {
-    //     document.getElementById('loading-screen').style.display = 'none';
-    //     console.error('Error:', err);
-    //     alert('Error finding plant information. Please try again.');
-    //   });
-
 });

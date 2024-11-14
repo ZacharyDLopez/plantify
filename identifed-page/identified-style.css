@@ -188,12 +188,18 @@ body {
 .back-button-container {
     text-align: left;
     margin-top: 2rem;
-  }
-  
-  #back-btn {
-    padding-left: .5rem;
+}
+    #back-btn {
+    padding-left: 1rem;
     font-weight: bold;
     cursor: pointer;
     border: none;
     background: none;
+    border-radius: 15px;
+  
+  &:hover {
+    color: #73ec8b;
+    background-color: white;
+    border-color: #73ec8b;
   }
+}
