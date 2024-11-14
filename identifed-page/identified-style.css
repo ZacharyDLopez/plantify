@@ -8,8 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-color: #73ec8b;
     overflow-x: hidden;
+}
+::-webkit-scrollbar-track{
+    background: #73ec8b;
 }
 
 body {
@@ -54,6 +56,7 @@ body {
 .title-container{
     display: flex;
     justify-content: center;
+    height: 8rem;
 }
 
 .title {
@@ -61,7 +64,7 @@ body {
     font-size: 60px;
     margin-bottom: 20px;
     font-family: "Leckerli One";
-    background: linear-gradient(to right, #73c726 10%, #09877f 40%);
+    background: linear-gradient(to right, #73c726, #09877f);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -95,10 +98,11 @@ body {
     background-color: #e0f2e9;
     padding: 20px;
     max-height: 100%;
+    max-width: 800px;
     border-radius: 15px;
 
     .description {
-        font-size: 40px;
+        font-size: 20px;
         margin: 25px 0; 
         margin-top: 25px;
     }
@@ -108,9 +112,14 @@ body {
         color: #444;
         font-size: 40px;
         margin-bottom: 10px;
-        width: 602px;
-        height: 44px;
-        overflow: hidden;
+        text-align: center;
+    }
+
+    h3 {
+        color: #444;
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     p {
@@ -128,7 +137,7 @@ body {
     margin-top: 4.5rem
 }
 
-.watering, .sunlight, .pruning {
+.watering, .propagation, .edible {
     min-width: 80%; 
     margin: 20px auto; 
     background-color: #CEE9E1; 
@@ -139,15 +148,15 @@ body {
     align-items: center; 
 }
 
-.sunlight {
+.propagation {
     background-color: #E8E9CE;
 }
 
-.pruning {
+.edible {
     background-color: #E9D8CE;
 }
 
-.watering-icon, .sunlight-icon, .pruning-icon {
+.watering-icon, .propagation-icon, .edible-icon {
     position: absolute;
     max-width: 155px;
     height: 134px;
@@ -157,20 +166,20 @@ body {
 
 }
 
-.watering-text, .sunlight-text, .pruning-text {
+.watering-text, .propagation-text, .edible-text {
     flex-grow: 1;
     display: flex;
     flex-direction: column; 
     justify-content: center; 
 }
 
-.watering h2, .sunlight h2, .pruning h2 {
+.watering h2, .propagation h2, .edible h2 {
     font-size: 26px;
     font-family: "Red Hat Text";
     margin: 0;
 }
 
-.watering p, .sunlight p, .pruning p {
+.watering p, .propagation p, .edible p {
     font-size: 24px;
     font-family: "Red Hat Text";
     margin-top: 5px;
@@ -178,15 +187,13 @@ body {
 
 .back-button-container {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 2rem;
   }
   
   #back-btn {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding-left: .5rem;
     font-weight: bold;
     cursor: pointer;
     border: none;
     background: none;
-
   }

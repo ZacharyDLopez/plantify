@@ -1,3 +1,5 @@
+let apiKey = "GOG9Ce5gxXFtJHnyTiB6t46i176OHoCLq3R2t98GQLcn4YTFiO"
+
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
 });
@@ -20,7 +22,7 @@ document.getElementById('image-input').addEventListener('change', function() {
     const imageBase64 = reader.result.split(',')[1];
 
     let uploadHeader = new Headers();
-    uploadHeader.append("Api-Key","pqnFZtdUpFM1GIpzBbz060OXiMwJMcaFB9usrCRaHBzrv7yWLk");
+    uploadHeader.append("Api-Key",apiKey);
     uploadHeader.append("Content-Type", "application/json");
 
     let rawUpload = JSON.stringify({
@@ -58,7 +60,7 @@ document.getElementById('image-input').addEventListener('change', function() {
           //localStorage.setItem('plantAccessToken', data.access_token);
           localStorage.setItem('plantID', data.id);
 
-          window.location.href = 'plant-identified.html';
+          window.location.href = '/identifed-page/plant-identified.html';
         } else {
           alert('No plant identified. Please try again.');
         }
@@ -72,7 +74,7 @@ document.getElementById('image-input').addEventListener('change', function() {
 
     let detailsHeader = new Headers();
     detailsHeader.append("Content-Type", "application/json");
-    detailsHeader.append("Api-Key", "pqnFZtdUpFM1GIpzBbz060OXiMwJMcaFB9usrCRaHBzrv7yWLk");
+    detailsHeader.append("Api-Key", apiKey);
 
     let detailRequestOptions = {
       method : 'GET',
