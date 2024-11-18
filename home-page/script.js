@@ -4,6 +4,7 @@ let zach_apiKey = "YSRIOeDCmjUd7XXjSmsLDW00bNEzSqgMRusqWQ8FGaQ5lQY98u"
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
 });
+
 //image upload handling
 document.getElementById('image-input').addEventListener('change', function() {
   const file = this.files[0];
@@ -13,7 +14,6 @@ document.getElementById('image-input').addEventListener('change', function() {
     return;
   }
 
-  
   document.getElementById('loading-screen').style.display = 'flex'; //display loading screen after img selection
 
   //convert image to base64 to be read by api
@@ -56,7 +56,8 @@ document.getElementById('image-input').addEventListener('change', function() {
 
           window.location.href = '/identifed-page/plant-identified.html';
 
-        } else {
+        } 
+        else {
           alert('No plant identified. Please try again.');
         }
       })
