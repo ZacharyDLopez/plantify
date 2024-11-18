@@ -1,4 +1,5 @@
-let apiKey = "GOG9Ce5gxXFtJHnyTiB6t46i176OHoCLq3R2t98GQLcn4YTFiO"
+//let apiKey = "GOG9Ce5gxXFtJHnyTiB6t46i176OHoCLq3R2t98GQLcn4YTFiO"
+let zach_apiKey = "YSRIOeDCmjUd7XXjSmsLDW00bNEzSqgMRusqWQ8FGaQ5lQY98u" 
 
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
@@ -22,7 +23,7 @@ document.getElementById('image-input').addEventListener('change', function() {
     const imageBase64 = reader.result.split(',')[1];
 
     let uploadHeader = new Headers();
-    uploadHeader.append("Api-Key",apiKey);
+    uploadHeader.append("Api-Key",zach_apiKey);
     uploadHeader.append("Content-Type", "application/json");
 
     let rawUpload = JSON.stringify({
@@ -37,10 +38,10 @@ document.getElementById('image-input').addEventListener('change', function() {
       redirect : 'follow'
     }
 
+    // Create Identification API call
     fetch("https://plant.id/api/v3/identification", requestOptions)
       .then(response => response.json())
       .then(data => {
-        //let accessToken = data.access_token
         document.getElementById('loading-screen').style.display = 'none';
 
         const suggestions = data.result.classification.suggestions;
@@ -50,10 +51,9 @@ document.getElementById('image-input').addEventListener('change', function() {
 
           //localstorage to persist across multiple html pages. (might need to check if we can get pruning and sunlight)
           localStorage.setItem('uploadedImage', reader.result);
+          localStorage.setItem('plantID', plantInfo.id);
           localStorage.setItem('scientificName', plantInfo.name);
-          localStorage.setItem('probability', plantInfo.probability);
-          localStorage.setItem('description', plantInfo.plant_details ? plantInfo.plant_details.description : "No description available.");
-          localStorage.setItem('plantID', data.id);
+
           window.location.href = '/identifed-page/plant-identified.html';
 
         } else {
@@ -63,7 +63,7 @@ document.getElementById('image-input').addEventListener('change', function() {
       .catch(err => {
         document.getElementById('loading-screen').style.display = 'none';
         console.error('Error:', err);
-        alert('Error identifying plant. Please try again.');
+        // alert('Error identifying plant. Please try again.');
       });
     };
 });
