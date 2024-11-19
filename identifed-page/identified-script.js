@@ -77,9 +77,10 @@ function getPlantDetails() {
     .then(response => response.json())
       .then(data => {
         const description = data.description.value || 'No description available.';
-        const wateringInfo = data.watering.value|| 'No watering info available.';
-        const propagationInfo = data.propagation_methods|| 'No propagation info available.';
-        const edibleInfo = data.edibile_parts || 'No info on edible parts available.';
+        const wateringInfo = data.watering ? `Watering frequency per week: min ${data.watering.min} times, max ${data.watering.max} times`
+        : "No watering info available.";
+        const propagationInfo = data.propagation_methods ? data.propagation_methods.join(", ") : "No propagation methods available.";
+        const edibleInfo = data.edible_parts ? data.edible_parts.join(", ") : "No edible parts available.";
         const commonNames = data.common_names ? data.common_names.join(', ') : 'No common names available.';
   
         document.querySelector('.info-section .description').innerText = description;

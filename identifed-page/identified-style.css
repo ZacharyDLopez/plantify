@@ -86,7 +86,7 @@ body {
     }
 }
 
-@media(max-width:1024px){
+@media(max-width:1500px ){
     .content-container{
     flex-direction: column;
     flex-wrap: wrap;
