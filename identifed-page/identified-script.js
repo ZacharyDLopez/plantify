@@ -51,6 +51,8 @@ function identifyPlant(){
     .then(data => {
       localStorage.setItem('plantAccessToken', data.entities[0].access_token)
       getPlantDetails();
+      document.getElementById('loading-screen').style.display = 'flex'; 
+      //display loading screen after img selection
     })
     .catch(error => console.error("error: ", error));
       // alert('Error retrieving plant details. Please try again.');

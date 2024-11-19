@@ -45,8 +45,6 @@ document.getElementById('image-input').addEventListener('change', function() {
     fetch("https://plant.id/api/v3/identification", requestOptions)
       .then(response => response.json())
       .then(data => {
-        document.getElementById('loading-screen').style.display = 'none';
-
         const suggestions = data.result.classification.suggestions;
 
         if (suggestions.length > 0) {
@@ -65,7 +63,7 @@ document.getElementById('image-input').addEventListener('change', function() {
         }
       })
       .catch(err => {
-        document.getElementById('loading-screen').style.display = 'none';
+        // document.getElementById('loading-screen').style.display = 'none';
         console.error('Error:', err);
         // alert('Error identifying plant. Please try again.');
       });
