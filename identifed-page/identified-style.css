@@ -54,6 +54,7 @@ body {
 .title-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     height: 8rem;
 }
 
@@ -69,6 +70,8 @@ body {
 
 .plant-container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
     justify-content: center;
 }
 
@@ -83,11 +86,12 @@ body {
     }
 }
 
-/* @media(max-width:600px){
+@media(max-width:1024px){
     .content-container{
     flex-direction: column;
+    flex-wrap: wrap;
     }
-} */
+}
 
 .info-section{
     display: flex;

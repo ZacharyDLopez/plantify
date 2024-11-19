@@ -1,4 +1,8 @@
-let apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
+import config from '../config.js';
+
+let apiKey = config.apiKey;
+
+//apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
 
 //Working API Calls
 window.onload = function() {

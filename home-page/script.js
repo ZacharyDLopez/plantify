@@ -1,4 +1,8 @@
-let apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
+import config from '../config.js';
+
+let apiKey = config.apiKey;
+//apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
+
 
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
@@ -22,7 +26,7 @@ document.getElementById('image-input').addEventListener('change', function() {
     const imageBase64 = reader.result.split(',')[1];
 
     let uploadHeader = new Headers();
-    uploadHeader.append("Api-Key",apiKey);
+    uploadHeader.append("Api-Key", apiKey);
     uploadHeader.append("Content-Type", "application/json");
 
     let rawUpload = JSON.stringify({
