@@ -1,5 +1,4 @@
-//let apiKey = "GOG9Ce5gxXFtJHnyTiB6t46i176OHoCLq3R2t98GQLcn4YTFiO"
-let zach_apiKey = "YSRIOeDCmjUd7XXjSmsLDW00bNEzSqgMRusqWQ8FGaQ5lQY98u" 
+let apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
 
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
@@ -23,7 +22,7 @@ document.getElementById('image-input').addEventListener('change', function() {
     const imageBase64 = reader.result.split(',')[1];
 
     let uploadHeader = new Headers();
-    uploadHeader.append("Api-Key",zach_apiKey);
+    uploadHeader.append("Api-Key",apiKey);
     uploadHeader.append("Content-Type", "application/json");
 
     let rawUpload = JSON.stringify({
