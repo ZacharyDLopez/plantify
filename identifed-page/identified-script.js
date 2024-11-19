@@ -1,8 +1,5 @@
 import config from '../config.js';
-
 let apiKey = config.apiKey;
-
-//apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
 
 //Working API Calls
 window.onload = function() {
@@ -54,9 +51,10 @@ function identifyPlant(){
       document.getElementById('loading-screen').style.display = 'flex'; 
       //display loading screen after img selection
     })
-    .catch(error => console.error("error: ", error));
+    .catch(err => {
+      console.error('Error:', err);
       // alert('Error retrieving plant details. Please try again.');
-  //};
+  });
 }
 
 function getPlantDetails() {

@@ -1,8 +1,5 @@
 import config from '../config.js';
-
 let apiKey = config.apiKey;
-//apiKey = "IY42jPH1izzojdYrFPhEM12u6b7sKQYMhfrkqJ1MTKx5QzfWsx"
-
 
 document.getElementById('upload-btn').addEventListener('click', function() {
   document.getElementById('image-input').click();
