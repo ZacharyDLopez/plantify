@@ -1,11 +1,11 @@
-import config from '../config.js';
+import config from '/config.js';
 let apiKey = config.apiKey;
 
 //Working API Calls
 window.onload = function() {
   //back button
   document.getElementById('back-btn').addEventListener('click', function() {
-    window.location.href = '/home-page/home-page.html';
+    window.location.href = 'home-page.html';
     localStorage.clear();
     // localStorage.removeItem('uploadedImage');
     // localStorage.removeItem('scientificName');

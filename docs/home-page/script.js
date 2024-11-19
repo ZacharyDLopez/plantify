@@ -1,4 +1,4 @@
-import config from '../config.js';
+import config from '/config.js';
 let apiKey = config.apiKey;
 
 document.getElementById('upload-btn').addEventListener('click', function() {
@@ -52,7 +52,7 @@ document.getElementById('image-input').addEventListener('change', function() {
           localStorage.setItem('plantID', plantInfo.id);
           localStorage.setItem('scientificName', plantInfo.name);
 
-          window.location.href = '/identified-page/plant-identified.html';
+          window.location.href = '../identified-page/plant-identified.html';
 
         } 
         else {
