@@ -7,14 +7,10 @@ import config from '/config.js';
 window.onload = function() {
   //back button
   document.getElementById('back-btn').addEventListener('click', function() {
-    window.location.replace('../home-page/home-page.html');
+    window.location.replace('../home-page/index.html');
     console.log(window)
     console.log(window.location)
     localStorage.clear();
-    // localStorage.removeItem('uploadedImage');
-    // localStorage.removeItem('scientificName');
-    // localStorage.removeItem('plantAcessToken');
-    // localStorage.removeItem('plantID');
   });
 
   //add it globally like the let api key
