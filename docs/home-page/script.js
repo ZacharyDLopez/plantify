@@ -2,7 +2,11 @@ import config from '/config.js';
 
 let apiKey = config.apiKey;
 
+console.log('commit test 1');
+
 document.getElementById('upload-btn').addEventListener('click', function() {
+  console.log('commit test 1');
+
   document.getElementById('image-input').click();
 });
 
