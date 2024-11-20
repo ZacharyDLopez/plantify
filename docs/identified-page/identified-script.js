@@ -1,6 +1,5 @@
 import config from '/config.js';
- //let apiKey = config.apiKey;
- let apiKey = null;
+ let apiKey = config.apiKey;
 
 
 //Working API Calls
