@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +69,16 @@ h2 {
   min-height: 100vh;
 }
 
+.description-container{
+  text-align: center;
+}
+
+.description-text{
+  font-family: "Lobster";
+  color: #444;
+  font-size: 30px;
+}
+
 
 .button-container {
   display: flex;
@@ -78,6 +90,7 @@ h2 {
   background-color: #73ec8b;
   border-color: #73ec8b;
   color: white;
+  margin-top: 1rem;
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
@@ -124,11 +137,11 @@ h2 {
 .title {
   margin: 0 auto;
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
   background: linear-gradient(to right, #73c726, #09877f);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-family: "Leckerli One";
+  font-family: "Lobster";
   display: block;
 }
 
