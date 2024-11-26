@@ -78,7 +78,7 @@ body {
 .content-container {
     display: flex;
     justify-content: space-evenly;
-    max-height: 20rem;
+    max-height: 30rem;
     #uploaded-image{
         max-width: 100%;
         aspect-ratio: auto;
