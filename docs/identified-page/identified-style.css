@@ -62,7 +62,8 @@ body {
     text-align: left;
     font-size: 60px;
     margin-bottom: 20px;
-    font-family: "Leckerli One";
+    width: 29rem;
+    font-family: "Lobster";
     background: linear-gradient(to right, #73c726, #09877f);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -97,6 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     background-color: #e0f2e9;
     padding: 14px;
     max-height: 100%;
